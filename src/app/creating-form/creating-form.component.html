@@ -1,0 +1,24 @@
+<form 
+class="creating-form"
+(submit)="createTask()"
+>
+  <input 
+  type="checkbox"
+  class="check-all"
+  [(checked)]="isChecked"
+  (change)="completeAll()"
+  >
+  <input 
+  type="text"
+  class="creating-input" 
+  autofocus 
+  placeholder="Put a new task here" 
+  [(ngModel)]="text" 
+  name="createTask"
+  >
+  <input 
+  type="submit" 
+  class="add-button" 
+  value="Add new task"
+  >
+</form>

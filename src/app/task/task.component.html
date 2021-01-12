@@ -1,0 +1,28 @@
+<li 
+id="{{task.id}}"
+class="task-item"
+>
+  <input 
+  type="checkbox" 
+  class="checkbox"
+  #checkbox
+  (change)="completeTask()"
+  [checked]="isChecked"
+  >
+  <p 
+  class="task-text checked"
+  *ngIf="task.checked"
+  >
+  {{task.text}} 
+  </p>
+  <p 
+  class="task-text"
+  *ngIf="!task.checked"
+  > 
+  {{task.text}} 
+  </p>
+  <span 
+  class="close-task"
+  (click)="deleteTask()"
+  >✖</span>
+</li>

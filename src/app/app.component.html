@@ -1,0 +1,17 @@
+<div class="container">
+  <app-creating-form
+  (onCreate)="addTask($event)"
+  (onCompleteAll)="markAll($event)"
+  ></app-creating-form>
+  <ul 
+  class="task-list"
+  >
+    <app-task
+    *ngFor="let item of tasks"
+    [task]="item"
+    [areAllChecked]="areAllChecked"
+    (onDelete)="deleteTask($event)"
+    (onComplete)="completeTask($event)"
+    ></app-task>
+  </ul>
+</div> 
